@@ -1,9 +1,6 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import User from './stores/users';
-import LoginForm from './loginForm';
-import InputField from './inputField';
-import SubmitButton from './SubmitButton';
 
 import {Form, FormGroup, Input, Label, Button} from 'reactstrap';
 
@@ -80,7 +77,7 @@ class App extends React.Component{
                 <div className="App">
                     <div className="container">
                         Hello {User.username}!
-                        <Button type="button" className="btn-lg btn-dark btn-block" onClick={() => this.doLogout}>Log in</Button>
+                        <Button type="button" className="btn-lg btn-dark btn-block" onClick={() => this.doLogout}>Log out</Button>
                     </div>
                 </div>
             );
@@ -99,7 +96,7 @@ class App extends React.Component{
                             <FormGroup>
                             <Label>Password</Label>
                             <Input></Input>
-                            <Button type="button" class="btn-lg btn-dark btn-block" onClick={() => this.doLogout}>Log in</Button>
+                            <Button type="button" class=" btn-lg btn-dark btn-block" onClick={() => this.doLogout}>Log in</Button>
                             </FormGroup>
                         </Form>
                     </div>
