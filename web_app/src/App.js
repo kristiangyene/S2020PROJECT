@@ -1,8 +1,9 @@
 import React from 'react';
-import {observer} from 'mobx-react';
+import { observer } from 'mobx-react';
+
 import User from './stores/users';
 
-import {Form, FormGroup, Input, Label, Button} from 'reactstrap';
+import {Form, FormGroup, Input, Button} from 'reactstrap';
 
 import './App.css';
 
@@ -14,7 +15,7 @@ class App extends React.Component{
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
-                    'Content-type': 'application/json'
+                    'Content-Type': 'application/json'
                 }
             });
             let res2 = await res1.json();
@@ -42,7 +43,7 @@ class App extends React.Component{
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
-                    'Content-type': 'application/json'
+                    'Content-Type': 'application/json'
                 }
             });
             let res2 = await res1.json();
@@ -86,21 +87,23 @@ class App extends React.Component{
         else{
             return(
                 <div className="App">
-                    <div className="App-header">Company name</div>
+                    <div className="App-header"><img src="https://i.pinimg.com/originals/b9/76/3c/b9763cd1a5449329d1371131ec3fe6c6.png" alt="new" style={{height:60, width:60}}></img>Gyeno Fashion</div>
                     <div className="container">
-                    <h1>log in</h1>
+                    <img src="https://i.pinimg.com/originals/b9/76/3c/b9763cd1a5449329d1371131ec3fe6c6.png" alt="new" style={{height:200, width:200}}></img>
+                            <h1 style={{marginBottom:15}}>LOG IN</h1>
                         <Form>
                             <FormGroup>
-                            <Label>Username</Label>
-                            <Input></Input>
+                            <Input type="text" placeholder="Username"></Input>
                             </FormGroup>
                             <FormGroup>
-                            <Label>Password</Label>
-                            <Input></Input>
-                            <Button type="button" class=" btn-lg btn-dark btn-block" onClick={() => this.doLogout}>Log in</Button>
+                            <Input type="password" placeholder ="Password"></Input>
+                            <Button type="button" class="btn-dark" block style={{marginTop:15, marginBottom:30}} onClick={() => this.doLogin}>Log in</Button>
+                            <div class="_0tv-g">OR</div>
+                            <p>No account? <a href="">Create an account</a></p>
                             </FormGroup>
                         </Form>
                     </div>
+                    <footer style={{margin:5}}>© 2020 Gyeno Fashion by Kristian Gyene</footer>
                 </div>
             );
         }
