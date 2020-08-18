@@ -85,9 +85,10 @@ class App extends React.Component{
         //Login page
         else{
             return(
-
                 <div className="App">
+                    <div className="App-header">Company name</div>
                     <div className="container">
+                    <h1>log in</h1>
                         <Form>
                             <FormGroup>
                             <Label>Username</Label>
